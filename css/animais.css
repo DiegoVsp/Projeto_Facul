@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+:root {
+  --letras: #ddd;
+  --letras-Dark: #777;
+  --letras-input: #555;
+}
+.conteudo-page {
+  position: relative;
+  width: 100%;
+  min-width: 100vh;
+  overflow-x: hidden;
+}
+.inicio {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+aside {
+  position: relative;
+  width: 300px;
+  height: 100vh;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside h1 {
+  font-size: 2rem;
+  color: var(--letras);
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+aside span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--letras);
+  line-height: 20px;
+}
+aside nav ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  margin-top: 10px;
+}
+aside nav ul li {
+  list-style-type: none;
+  margin: 20px;
+}
+aside nav ul li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: var(--letras);
+  font-weight: bold;
+  padding: 8px;
+}
+.conteudo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  background:#ddd;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease-in-out;
+}
+.conteudo.ativo {
+  left: 300px;
+}
+/* TOGGLE */
+.toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.toggle .btn-hamb {
+  background: #333;
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  transition: all .2s ease-in;
+}
+.toggle .btn-hamb::before,
+.toggle .btn-hamb::after {
+  content: '';
+  position: absolute;
+  background: #333;
+  width: inherit;
+  height: 2px;
+  border-radius: 2px;
+  transition: all .2s ease-in;
+}
+
+.toggle .btn-hamb::before {
+transform: translateY(-8px);
+}
+.toggle .btn-hamb::after {
+transform: translateY(8px);
+}
+.toggle.open .btn-hamb {
+transform: translateX(-50px);
+background: transparent;
+}
+.toggle.open .btn-hamb::before {
+  transform: rotate(45deg) translate(35px, -35px)
+}
+.toggle.open .btn-hamb::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+.form {
+  width: 100%;
+  /* background: chartreuse; */
+  padding: 80px 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form form {
+  background: #fff;
+  width: 90%;
+  max-width: 980px;
+  /* background: red; */
+  padding: 40px;
+  /* border-radius: 20px; */
+
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.15),
+              0px 10px 20px -10px rgba(0, 0, 0, 0.1);
+}
+.form h3 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: var(--letras-Dark);
+}
+
+.grupo {
+  display: flex;
+  flex-direction: row;
+}
+.grupo input {
+  flex: 1 1;
+  display: block;
+  margin: 2px 2px;
+  padding: 5px;
+  font-size: 1rem;
+}
+.form form a {
+  background: #333;
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--letras);
+}
+

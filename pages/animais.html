@@ -3,11 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animais</title>
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/animais.css">
 </head>
 <body>
-  <section class="ab2 open" id="animais">
-    animais
-  </section>
+  <div class="conteudo-page">
+    <div class="inicio">
+
+      <aside>
+        <div>
+          <h1>FazenTech</h1>
+          <span>Sistema de Cadastro e Controle</span>
+          <nav class="menu">
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="./pages/clientes.html">Clientes</a></li>
+              <li><a href="./pages/produtos.html">Produtos</a></li>
+              <li><a href="./pages/funcionarios.html">Funcionários</a></li>
+              <li><a href="./pages/equipamentos.html">Equipamentos</a></li>
+              <li><a href="./pages/varejistas.html">Varejistas</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <div class="conteudo">
+        <div class="toggle" onclick="toggle()">
+          <div class="btn-hamb"></div>
+        </div>
+        <section class="form">
+          <form autocomplete="off">
+            <h3>Cadastro Animais Doentes</h3>
+            <div class="inputForm">
+              <div class="grupo">
+                <input type="text" id="login" placeholder="Código">
+                <input type="text" id="login" placeholder="Produção Leite(Qtd/Dia)">
+              </div>
+              <div class="grupo">
+                <input type="text" id="login" placeholder="Ultima ordenha">
+                <input type="text" id="login" placeholder="Funcionário responsável">
+              </div>
+              <div class="grupo">
+                <input type="text" id="login" placeholder="Horário última ordenha">
+                <input type="text" id="login" placeholder="Situação">
+                <input type="text" id="login" placeholder="Dias em Tratamento">
+              </div>
+              <div class="grupo">
+                <input type="text" id="login" placeholder="Tratamento">
+              </div>
+            </div>
+            <a href="#"> ENVIAR</a>
+            
+          </form>
+        </section>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="../script.js"></script>
 </body>
 </html>
